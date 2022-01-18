@@ -28,7 +28,8 @@ module.exports=async (req, res)=>{
 
     user_data.status= "200";
     user_data.status_description= "User Account created succesfully";
-    user_data.permissions= permission_chart[user_type];
+    console.log(permission_chart[user_type]);
+    user_data.permissions=permission_chart[user_type];
     res.send(user_data);  
     return;
 }
